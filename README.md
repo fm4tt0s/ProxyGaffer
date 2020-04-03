@@ -13,10 +13,10 @@ runs from crontab each N minutes, then check for utun2 IP, whenever it detects t
 
 tested only at MacOS Catalina, might work on previous versions too. you need to set below vars accordingly.
 
-  _interface="utun2"
-  _ipmatch="10"
-  _conn="Wi-Fi"
-  _ptypes="webproxy securewebproxy"
-  _proxy="YOUR_PROXY_ADDR" 
-  _port="YOUR_PROXY_ADDR_PORT" 
-  _bypasslist="YOUR_PROXY_BYPASS_LIST SEPARATED BY SPACES"
+    _interface="utun2"
+    _ipmatch="10"
+    _conn="Wi-Fi"
+    _ptypes="webproxy securewebproxy"
+    _proxy="YOUR_PROXY_ADDR" 
+    _port="YOUR_PROXY_ADDR_PORT" 
+    _bypasslist="YOUR_PROXY_BYPASS_LIST SEPARATED BY SPACES"
