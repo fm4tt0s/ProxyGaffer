@@ -78,9 +78,11 @@ while [[ -n "${_action}" ]]; do
     show)
         _oper="get"
         for i in $_ptypes; do
-            /usr/sbin/networksetup -"${_oper}${i}" "${_conn}" "${_proxy}" "${_port}"
+            echo "${i}:"
+            /usr/sbin/networksetup -"${_oper}${i}" "${_conn}" | tr '\n' '\t' ; echo
         done
-        /usr/sbin/networksetup -getproxybypassdomains "${_conn}"
+        echo "bypass list: "
+        /usr/sbin/networksetup -getproxybypassdomains "${_conn}" | tr '\n' ' ' ; echo
         _action="false"
     ;;
     on|off)
